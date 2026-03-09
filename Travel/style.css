@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+:root {
+    --primarycolor: #3498db;
+    --secondarycolor: #2ecc71;
+    --textcolor: #333;
+    --bc: #f384f1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--bc);
+    color: var(--textcolor);
+}
+
+.header h1 {
+    color: var(--textcolor);
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks a {
+    color: var(--textcolor);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: var(--primarycolor);
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, var(--primarycolor), var(--secondarycolor));
+    color: white;
+}
+
+.hero .btn-primary {
+    margin-top: 20px;
+    padding: 5px 30px;
+    background: linear-gradient(to left, var(--primarycolor), var(--secondarycolor));
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.hero .btn-primary:hover {
+    transform: scale(1.1);
+}
+
+.destinations {
+    padding: 60px 10%;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+/*
+.destinations-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    
+    height: 300px;
+    position: relative;
+    background-position: center;
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode: overlay;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    gap : 20px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+    */
+.destination-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* keeps cards in one line */
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    background-size: cover;
+
+    transform: scale(0.9);
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+
+.packages {
+    padding: 60px 10%;
+    text-align: center;
+    background: linear-gradient(to right, var(--primarycolor), var(--secondarycolor));
+    color: white;
+}
+
+.package-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.package-card {
+    background: linear-gradient(to left, var(--primarycolor), var(--secondarycolor));
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-bottom: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+}
+
+.contactus {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--bc);
+    color: white
+}
+
+.contactus .btn-secondary {
+    margin-top: 20px;
+    padding: 5px 30px;
+    background-color: #9B5DE0;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contactus .btn-secondary:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #9B5DE0;
+    color: white;
+}
+
+
+/* responsive media query*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .destination-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 80px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .destination-cards h3 {
+        font-size: 1.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .package-list {
+        flex-direction: column;
+    }
+}
+
+
+#searchBar{
+    padding:10px 20px;
+    width:300px;
+    border-radius:25px;
+    border:none;
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+
+.dark{
+    background-color:#121212;
+    color:white;
+}
+
+.dark .destinations{
+    background-color:#1e1e1e;
+}
+
+.dark .header{
+    background-color:#1e1e1e;
+}
+
+
+.dark .packages{
+    background: linear-gradient(to right,#141e30,#243b55);
+}
+
+.dark .contactus{
+    background:#111;
+}
+
+.dark footer{
+    background:#000;
+}
+
+.hero{
+    background-size:cover;
+    background-position:center;
+    transition: background 1s ease-in-out;
+}
